@@ -1,0 +1,34 @@
+// Define a class for creating Person objects
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Method to greet the person
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+// Create an array of Person objects
+const people = [
+  new Person('Alice', 30),
+  new Person('Bob', 25),
+  new Person('Charlie', 35)
+];
+
+// Function to filter people by age
+const filterByAge = (peopleArray, age) => {
+  return peopleArray.filter(person => person.age === age);
+};
+
+// Callback function to log the filtered people
+const logFilteredPeople = (filteredPeople) => {
+  console.log("Filtered people:", filteredPeople);
+};
+
+// Filter people by age and log the result
+const desiredAge = 30;
+const filteredPeople = filterByAge(people, desiredAge);
+logFilteredPeople(filteredPeople);
