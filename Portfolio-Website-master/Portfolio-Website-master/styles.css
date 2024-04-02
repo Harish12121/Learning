@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
 *{
-  margin:0;
+  margin: 10px;;
   padding:0;
-  box-sizing:border-box;
+  box-sizing: content-box;
   scroll-behavior:smooth;
 }
 a{
@@ -237,18 +237,12 @@ profile-photo .img{
 
 /*---------------------------Education & Internship---------------------------*/
 
-.education-content .row{
-  display: flex;
-  border-radius: 5px;
-  height: 400px;
-  margin-bottom: 250px;
-}
+
 
 .education-content .title{
   color: #fed700;
 }
-.education-content .row .education,
-.education-content .row .internship
+.education-content .row .education
 {
   color: #e5e5e5;
   flex:0 0 50%;
@@ -277,22 +271,9 @@ profile-photo .img{
   padding-left: 37px;
   padding-bottom: 50px; 
 }
-.education-content .row  .internship .timeline-item{
-  position:relative;
-  padding-left: 37px;
-  padding-bottom: 30px; 
-}
+
 .education-content .row .timeline-item:last-child{
   padding-bottom: 0;
-}
-.education-content .row .timeline-item::before{
-  content: "";
-  width: 1px;
-  position: absolute;
-  height: 100%;
-  left: 7px;
-  top: 0;
-  background-color: #fed700;  
 }
 .education-content .row .circle-dot{
   position: absolute;
@@ -308,16 +289,7 @@ profile-photo .img{
   font-size: 18px;
   margin-bottom: 12px;
 }
-.education-content .row .internship .timeline-title  {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-.education-content .row .timeline-text{
-  line-height: 25px;
-  font-size: 16px;
-  text-align: justify;
-}
+
 
 
 
@@ -380,7 +352,7 @@ profile-photo .img{
 
 
 
-/*---------------------------Contact Me---------------------------*/
+
 .contact-content{
   padding: 100px 0;
   color: #fff;
@@ -429,7 +401,7 @@ profile-photo .img{
 
 
 
-/*---------------------------Footer---------------------------*/
+
 .footer {
     max-width: 950px;
     margin: 0 auto;
@@ -446,90 +418,7 @@ profile-photo .img{
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 10px;
   }
-  
-  .copyright {
-    font-size: 12px;
-  }
+ 
 
 
-
-
- /*------------------- Responsive Design on small screen -------------------*/
-
-/* Medium layout */
-@media only screen and (min-width:1000px) and (max-width:1200px){
-  .container{
-    width: 970px;
-  }
-}
-
-@media(max-width:1050px){
-  .FirstElement{ 
-    flex-direction: column;
-    padding-top: 2rem;
-  }
-  .profile-text{
-    padding: 40px 0px;
-  }
-}
-
-
-
-/* tablet layout */
-@media only screen and (min-width:768px) and (max-width:999px){
-  .container{
-    width: 750px;
-  } 
-}  
-
-
-/* Mobile Layout */
-@media only screen and (max-width:767px){
-  .container{
-    width: 350px;
-  }
-
-  .header .menu_icon {
-    display: block;
-  }
-  .header ul{
-    display: none;
-  }
-  .header i{
-    color: #e5e5e5;
-  }
-
-  .profile-text{
-    width: 350px;
-  }
-  .FirstElement .profile-text p{
-    text-align: justify;
-  }
-  .about{
-    flex-direction: column;
-    flex-basis: 100%;
-    margin-bottom: 30px;
-  }
-  .about-skills{
-    width: 100%;
-    margin-top: 30px;
-  }
-  .education-content .row {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 50px;
-  }
-
-  .education-content .row .education,
-  .education-content .row .internship {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin-top: 30px;
-  }
-  .project{
-    flex-basis: 100%;
-    margin-bottom: 30px;
-  }
-
-}
 
