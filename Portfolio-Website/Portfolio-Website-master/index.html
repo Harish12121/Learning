@@ -19,10 +19,7 @@
         <div class="container">
             <div class="header">
 
-                <a href="" class="logo">
-                    <img src="files/signaturecropped.png" alt="" class="signature">
-                    <i class="fa fa-bolt"></i>
-                </a>
+
 
                 <ul class="navbar">
                     <li><a href="#home">Home</a></li>
@@ -42,8 +39,10 @@
 
     <!-------------------------- Home Page -------------------------->
     <div class="FirstElement" id="home">
+
+
         <div class="profile-photo">
-            <img src="files/photo.jpg" alt="profile picture">
+            <img src="files/IMG-20240404-WA0000.jpg" alt="profile picture">
         </div>
         <div class="profile-text">
             <h5>Hi I'm </h5><br>
@@ -193,27 +192,46 @@
                 <p>Get In Touch</p>
             </div>
             <div class="contact">
-                <form name="submitToGoogleSheet">
+                <form id="myForm">
                     <input type="text" name="NAME" placeholder="Name" required>
                     <input type="email" name="EMAIL" placeholder="Email" required>
                     <input type="text" name="SUBJECT" placeholder="Subject">
                     <textarea name="MESSAGE" placeholder="Message"></textarea>
                     <input type="submit" value="Send Message" class="submit">
                 </form>
+                <button class="submit" onclick="SubForm()">Submit</button>
                 <span id="msg"></span>
             </div>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/lvfTluycsyv6AXCF/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="script.js"></script>
 
-    <!-------------------------- Footer section -------------------------->
+
     <footer class="footer">
-        <small class="message">Thanks for visiting and happy coding!</small>
+        <small class="message">Thanks for visiting My Portfolio..</small>
 
     </footer>
 
